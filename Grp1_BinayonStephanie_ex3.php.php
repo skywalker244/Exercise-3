@@ -6,10 +6,9 @@ $html_content = file_get_contents($html_file);
 echo "Content of $html_file: $html_content";
 
 // b. file_put_contents
-$new_file = 'new_file.html';
-$new_content = '<h1>This is a new file!</h1>';
-file_put_contents($new_file, $new_content);
-echo "Wrote '$new_content' to $new_file";
+$contentToAppend = "This is the content to be appended.";
+file_put_contents('index2.html', $contentToAppend, FILE_APPEND);
+echo "Content appended successfully!";
 
 // c. file_exists
 $check_file = 'index2.html';
